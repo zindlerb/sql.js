@@ -815,7 +815,7 @@ Module["onRuntimeInitialized"] = function onRuntimeInitialized() {
     * an SQLite database file
     */
     function Database(data) {
-        this.filename = "dbfile_" + (0xffffffff * Math.random() >>> 0);
+        this.filename = "persistent/dbfile";
         if (data != null) {
             FS.createDataFile("/", this.filename, data, true, true);
         }
